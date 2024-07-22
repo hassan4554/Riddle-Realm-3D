@@ -2,35 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class riddletrigger : MonoBehaviour
+public class RiddleTrigger : MonoBehaviour
 {
-    public string riddle = "What has keys but can't open locks?";
-    public Text riddleText; // Assign this from the inspector
+    private string riddleText = "You can see the door with right eye closed!";
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            DisplayRiddle();
+            Debug.Log("Show Riddle!");
+            RiddleUI.Instance.ShowRiddle(riddleText);
         }
-    }
-
-    private void DisplayRiddle()
-    {
-        riddleText.text = riddle;
-        riddleText.gameObject.SetActive(true);
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            HideRiddle();
-        }
-    }
-
-    private void HideRiddle()
-    {
-        riddleText.gameObject.SetActive(false);
     }
 }

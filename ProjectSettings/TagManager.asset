@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Wall1
   - Text
+  - Wall_Correct
+  - Wall_Wrong
   layers:
   - Default
   - TransparentFX

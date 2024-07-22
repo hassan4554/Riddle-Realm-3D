@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+//using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class player : MonoBehaviour
@@ -7,6 +8,9 @@ public class player : MonoBehaviour
     private float speed = 10f;
     private float HorizontalInput;
     private float VerticalInput;
+
+    public string correctRoomTag = "CorrectRoom"; // Tag for the correct room
+    public string gameOverSceneName = "GameOver"; // Name of the game over scenesss
     void Start()
     {
         Debug.Log("Game Started!");
@@ -23,14 +27,21 @@ public class player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Wall1")
+        if (other.gameObject.tag == "Wall_Correct!")
         {
-            Debug.Log("New Room Entered!");
+            Debug.Log("Correct Room Entered!");
         }
 
         else
         {
-            Debug.Log("room not entered");
+            Debug.Log("Wrong Room entered!");
+           // GameOver();
         }
     }
+
+    //void GameOver()
+    //{
+    //    // Reload the scene or load a game over scene
+    //    SceneManager.LoadScene(gameOverSceneName);
+    //}
 }
