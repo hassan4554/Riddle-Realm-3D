@@ -25,19 +25,19 @@ public class player : MonoBehaviour
         transform.Rotate(Vector3.up * Time.deltaTime * HorizontalInput * 40);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Wall_Correct!")
-        {
-            Debug.Log("Correct Room Entered!");
-        }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.tag == "Wall_Correct!")
+    //    {
+    //        Debug.Log("Correct Room Entered!");
+    //    }
 
-        else
-        {
-            Debug.Log("Wrong Room entered!");
-           // GameOver();
-        }
-    }
+    //    else
+    //    {
+    //        Debug.Log("Wrong Room entered!");
+    //       // GameOver();
+    //    }
+    //}
 
     //void GameOver()
     //{
