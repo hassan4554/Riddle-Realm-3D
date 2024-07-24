@@ -12,7 +12,11 @@ public class CameraFollow : MonoBehaviour
     {
         offset.x = 0;
         offset.y = 6;
-        offset.z = 18;
+        offset.z = 12;
+
+        //offset.x = 0;
+        //offset.y = 0;
+        //offset.z = 0;
 
         // Desired position of the camera
         Vector3 desiredPosition = player.position + offset;
@@ -24,7 +28,7 @@ public class CameraFollow : MonoBehaviour
 
         // Apply the smoothed position to the camera
         transform.position = smoothedPosition;
-
+        transform.LookAt(player);
         Quaternion desiredRotation = Quaternion.LookRotation(player.position - transform.position);
         transform.rotation = Quaternion.Slerp(transform.rotation, desiredRotation, smoothSpeed);
     }
