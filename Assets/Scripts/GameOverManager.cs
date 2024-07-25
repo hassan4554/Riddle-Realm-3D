@@ -16,6 +16,7 @@ public class GameOverManager : MonoBehaviour
     {
         //Quits the application
         Debug.Log("Exiting...!");
-        Application.Quit();
+        SceneManager.LoadScene("MainMenu");
+        //Application.Quit();
     }
 }
