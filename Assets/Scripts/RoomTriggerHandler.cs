@@ -1,36 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement; // To reload the scene for game over
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class RoomTriggerHandler : MonoBehaviour
 {
-    public string correctRoomTag = "CorrectRoom"; // Tag for the correct room
-    public string gameOverSceneName = "GameOver"; // Name of the game over scene
-
-    
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Triggered with " + other.tag);
-        if (other.CompareTag("Wall_Correct"))
+        SceneManagement sceneManager = FindObjectOfType<SceneManagement>();
+
+        if (other.CompareTag("Win"))
+        {
+            int nextLevel = sceneManager.GetCurrentLevel() + 1;
+            Debug.Log("Next Level: " + nextLevel);
+            PlayerPrefs.SetInt("LastCompletedLevel", nextLevel);
+            PlayerPrefs.Save();
+
+            SceneManager.LoadScene("WinScene");
+        }
+
+        else if (other.CompareTag("Wall_Correct"))
         {
             Debug.Log("Entered the correct room!");
         }
 
         else if (other.CompareTag("Wall_Wrong"))
         {
-            Debug.Log("Entered the wrong room!");
+            int nextLevel = sceneManager.GetCurrentLevel();
+            Debug.Log("Next Level: " + nextLevel);
+            PlayerPrefs.SetInt("LastCompletedLevel", nextLevel);
+            PlayerPrefs.Save();
 
-            // Call the GameOver function to handle the game over logic
             GameOver();
-            //Application.Quit();
         }
-
     }
 
     void GameOver()
     {
-        // Reload the scene or load a game over scene
-        SceneManager.LoadScene(gameOverSceneName);
+        SceneManager.LoadScene("GameOver");
     }
 }

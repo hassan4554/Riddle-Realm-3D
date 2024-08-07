@@ -8,6 +8,7 @@ TagManager:
   - Text
   - Wall_Correct
   - Wall_Wrong
+  - Win
   layers:
   - Default
   - TransparentFX

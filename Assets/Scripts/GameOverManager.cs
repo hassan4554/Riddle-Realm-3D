@@ -5,18 +5,22 @@ using UnityEngine;
 
 public class GameOverManager : MonoBehaviour
 {
-    public void RestartGame()
+    public void TryAgain()
     {
-        //Assuming the main game scene is called "MainScene"
-        Debug.Log("Restart Game!");
-        SceneManager.LoadScene("SampleScene");
+        SceneManagement sceneManager = FindObjectOfType<SceneManagement>();
+        if (sceneManager != null)
+        {
+            sceneManager.LoadSameLevel();
+        }
+
+        else
+        {
+            Debug.LogError("Scene not found!");
+        }
     }
 
     public void QuitGame()
     {
-        //Quits the application
-        Debug.Log("Exiting...!");
         SceneManager.LoadScene("MainMenu");
-        //Application.Quit();
     }
 }

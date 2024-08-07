@@ -10,7 +10,6 @@ public class RiddleTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Show Riddle!");
             RiddleUI.Instance.ShowRiddle(riddleText);
         }
     }

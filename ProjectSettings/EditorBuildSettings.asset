@@ -9,11 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: b5cc0dec1bc5fc14d9f2c157bfc0a587
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: c850ee8c3b14cc8459e7e186857cf567
+    path: Assets/Scenes/WinScene.unity
+    guid: d703b585bd24aa64aa77efe417c1b9eb
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: ee36807584b3d8e4bbc5cbdb46c37e86
+  - enabled: 1
+    path: Assets/Scenes/Level_1.unity
+    guid: c850ee8c3b14cc8459e7e186857cf567
+  - enabled: 1
+    path: Assets/Scenes/Level_2.unity
+    guid: d5b0163c9b68a75438e4ee196f0bf912
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000,
       guid: ce24a163444a29041be877d66d900683, type: 2}

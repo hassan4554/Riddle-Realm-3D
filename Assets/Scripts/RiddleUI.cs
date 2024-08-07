@@ -22,8 +22,6 @@ public class RiddleUI : MonoBehaviour
 
     public void ShowRiddle(string riddle)
     {
-
-        Debug.Log("Riddle : " + riddle);
         riddleText.text = riddle;
         riddleText.gameObject.SetActive(true);
     }
