@@ -3,7 +3,17 @@ guid: f35ba9ebdeb8d1b4796c67269b7c7195
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Project_house_2nd_grassWindWide1Shader
+    second: {fileID: 2100000, guid: b35d5ae60555e53439f700d78a0a49ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 99754ba973925bc4193246e5b4d64167, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
