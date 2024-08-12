@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Project_house_2nd_grassWindWide1Shader
-    second: {fileID: 2100000, guid: b35d5ae60555e53439f700d78a0a49ca, type: 2}
+    second: {fileID: 2100000, guid: 268f5c07e2873e84ea3470b15f6d513d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

@@ -8586,6 +8586,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Project house 2nd (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1912401295427170381, guid: f35ba9ebdeb8d1b4796c67269b7c7195,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 9039017934982111179, guid: f35ba9ebdeb8d1b4796c67269b7c7195,
         type: 3}
       propertyPath: m_LocalScale.x
