@@ -22,7 +22,7 @@ The objective of the game is to successfully escape the building by solving all 
 ### 1. Clone the repository
 
  ```bash
- git clone https://github.com/your-username/Riddle-Realm-3D.git
+ git clone https://github.com/hassan4554/Riddle-Realm-3D.git
  ```
 
 ### 2. Open in Unity
